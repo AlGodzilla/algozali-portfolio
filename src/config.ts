@@ -173,18 +173,21 @@ export const portfolioConfig: PortfolioConfig = {
       year: "2024",
       image: "/images/portfolio-market.png",
       featured: true,
+      githubUrl: "https://community.fabric.microsoft.com/t5/Data-Stories-Gallery/VanArsdel-Ltd-Market-Share-Assignment-Finals/m-p/4752706",
     },
     {
       title: "Google Ads Campaign Tracker",
       category: "Created in Google Looker",
       year: "2024",
       image: "/images/portfolio-google.png",
+      githubUrl: "https://lookerstudio.google.com/u/0/reporting/5c508f8a-324f-4509-b290-e4df4810e9e0",
     },
     {
       title: "Restaurant Dashboard",
       category: "Created in Tableau",
       year: "2024",
       image: "/images/portfolio-restaurant.png",
+      githubUrl: "https://public.tableau.com/app/profile/muhammad.rizqy.al.gozali/viz/UAS_DV_2440029196/Dashboard2",
     },
     {
       title: "User Behaviour Analysis",
