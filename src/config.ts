@@ -322,8 +322,8 @@ export const footerConfig: FooterConfig = {
     },
   ],
   socialLinks: [
-    { iconName: "Linkedin", href: "https://linkedin.com", label: "LinkedIn" },
-    { iconName: "Github", href: "https://github.com", label: "GitHub" },
+    { iconName: "Linkedin", href: "https://www.linkedin.com/in/gozali/", label: "LinkedIn" },
+    { iconName: "Github", href: "https://github.com/AlGodzilla/", label: "GitHub" },
     { iconName: "Mail", href: "mailto:contact@algozali.page", label: "Email" },
   ],
   newsletterHeading: "Stay Updated",
