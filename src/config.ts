@@ -316,7 +316,7 @@ export const footerConfig: FooterConfig = {
       title: "Contact",
       links: [
         { label: "contact@algozali.page", href: "mailto:contact@algozali.page" },
-        { label: "+62 813 1060 3517", href: "tel:+6281310603517" },
+        { label: "+62 813 1060 3517", href: "https://wa.me/6281310603517" },
         { label: "Tangerang, Indonesia", href: "#" },
       ],
     },
