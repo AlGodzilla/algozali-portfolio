@@ -75,7 +75,7 @@ export function Testimonials() {
                   <p className="text-xs text-exvia-black/50">{testimonial.role}</p>
                 </div>
                 <a
-                  href="https://ieeexplore.ieee.org/document/10813603"
+                  href="https://ieeexplore.ieee.org/document/10780832/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm text-exvia-black hover:text-exvia-black/70 transition-colors"

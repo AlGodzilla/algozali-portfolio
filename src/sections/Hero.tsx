@@ -38,20 +38,39 @@ export function Hero() {
       onMouseMove={handleMouseMove}
       style={{ '--mouse-x': 'calc(42vw - 200px)', '--mouse-y': 'calc(28vh - 200px)' } as React.CSSProperties}
     >
-      {/* Background Image with Blur */}
+      {/* Background Image with Blur - Responsive WebP with fallback */}
       <div
         className={cn(
           'absolute inset-0 transition-opacity duration-[1800ms]',
           isLoaded && imageLoaded ? 'opacity-100' : 'opacity-0'
         )}
       >
-        <img
-          src={heroConfig.backgroundImage}
-          alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'blur(15px) brightness(0.7)' }}
-          onLoad={() => setImageLoaded(true)}
-        />
+        <picture>
+          {/* WebP sources for different screen sizes */}
+          <source
+            srcSet="/images/hero-bg-800.webp"
+            media="(max-width: 800px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="/images/hero-bg-1200.webp"
+            media="(max-width: 1200px)"
+            type="image/webp"
+          />
+          <source
+            srcSet="/images/hero-bg-1920.webp"
+            type="image/webp"
+          />
+          {/* Fallback to original JPG */}
+          <img
+            src={heroConfig.backgroundImage}
+            alt="Hero Background"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: 'blur(15px) brightness(0.7)' }}
+            onLoad={() => setImageLoaded(true)}
+            decoding="async"
+          />
+        </picture>
       </div>
 
       {/* Sharp Image Container - uses CSS variables for position */}
@@ -77,11 +96,30 @@ export function Hero() {
             willChange: 'transform',
           }}
         >
-          <img
-            src={heroConfig.backgroundImage}
-            alt="Hero Sharp"
-            className="w-full h-full object-cover"
-          />
+          <picture>
+            {/* WebP sources for different screen sizes */}
+            <source
+              srcSet="/images/hero-bg-800.webp"
+              media="(max-width: 800px)"
+              type="image/webp"
+            />
+            <source
+              srcSet="/images/hero-bg-1200.webp"
+              media="(max-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcSet="/images/hero-bg-1920.webp"
+              type="image/webp"
+            />
+            {/* Fallback to original JPG */}
+            <img
+              src={heroConfig.backgroundImage}
+              alt="Hero Sharp"
+              className="w-full h-full object-cover"
+              decoding="async"
+            />
+          </picture>
         </div>
       </div>
 
